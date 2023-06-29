@@ -1,0 +1,27 @@
+meaning:
+  prompt: |-
+    You are comparing the meaning of submitted answer to an expected answer. Here is the data:
+    [BEGIN DATA]
+    ************
+    [Expected]: {ideal}
+    ************
+    [Submission]: {completion}
+    ************
+    [END DATA]
+
+    Compare the content of the submitted answer with the expected answer. Ignore any differences in whitespace or style.
+    Answer the question by responding with one of the following:
+      "Correct": The submitted answer and the expected answer have the same meaning.
+      "Incorrect": The submitted answer and the expert answer are have different meanings.
+      "Partially Correct": The submitted answer and the expert answer are have partially same meanings.
+
+  choice_strings:
+    - "Correct"
+    - "Incorrect"
+    - "Partially Correct"
+  choice_scores:
+    "Correct": 1.0
+    "Incorrect": 0.0
+    "Partially Correct": 0.5
+  input_outputs:
+    input: completion

@@ -1,0 +1,9 @@
+match-meaning:
+  id: match-meaning.dev.v0
+  metrics: [accuracy]
+match-meaning.dev.v0:
+  class: evals.elsuite.modelgraded.classify:ModelBasedClassify
+  args:
+    samples_jsonl: match_meaning/samples.jsonl
+    eval_type: cot_classify
+    modelgraded_spec: meaning
